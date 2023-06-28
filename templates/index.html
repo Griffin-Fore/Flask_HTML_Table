@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="font-size: xx-large;">
+    <h1>Hello there!</h1>
+    <table style="border:2px solid black">
+        <thead style="border:2px solid black">
+            <tr>
+                <th style="border-right:2px solid black">First Name</th>
+                <th style="border-right:2px solid black">Last Name</th>
+                <th style="text-align: left;">Full Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr>
+                    <td style="border-right:2px solid black; border-top:2px solid black">{{user['first_name']}}</td>
+                    <td style="border-right:2px solid black; border-top:2px solid black">{{user['last_name']}}</td>
+                    <td style="border-top:2px solid black">{{user['first_name']}} {{user['last_name']}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
